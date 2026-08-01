@@ -1635,7 +1635,7 @@ void MapDisp_DrawRooms(PlayState* play, s32 viewX, s32 viewY, s32 viewWidth, s32
     Gfx_SetupDL39_Opa(play->state.gfxCtx);
     gDPSetPrimColor(POLY_OPA_DISP++, 0, 0, 255, 255, 255, pauseCtx->alpha);
     // #region 2S2H [Port] Load our merged palette at index 0, the other indexes do not need to be loaded
-    gDPLoadTLUT_pal16(POLY_OPA_DISP++, 0, sMergedPal);
+    gDPLoadTLUT(POLY_OPA_DISP++, 0x10 * 3, 256, sMergedPal);
     // gDPLoadTLUT_pal16(POLY_OPA_DISP++, 0, sUnvisitedRoomPal);
     // gDPLoadTLUT_pal16(POLY_OPA_DISP++, 1, sVisitedRoomPal);
     // gDPLoadTLUT_pal16(POLY_OPA_DISP++, 2, sCurrentRoomPal);
